@@ -1,0 +1,61 @@
+void setNumberOnClock(int hour){
+	  switch(hour){
+  	  	  case 1:{
+  	  		  HAL_GPIO_WritePin(a1_GPIO_Port, a1_Pin, GPIO_PIN_RESET);
+  	  		  break;
+  	  	  }
+  	  	  case 2:{
+  	  		  HAL_GPIO_WritePin(a2_GPIO_Port, a2_Pin, GPIO_PIN_RESET);
+  	  		  break;
+  	  	  }
+  	  	  case 3:{
+  	  		  HAL_GPIO_WritePin(a3_GPIO_Port, a3_Pin, GPIO_PIN_RESET);
+  	  		  break;
+  	  	  }
+  	  	  case 4:{
+  	  		  HAL_GPIO_WritePin(a4_GPIO_Port, a4_Pin, GPIO_PIN_RESET);
+  	  		  break;
+  	  	  }
+  	  	  case 5:{
+  	  		  HAL_GPIO_WritePin(a5_GPIO_Port, a5_Pin, GPIO_PIN_RESET);
+  	  		  break;
+  	  	  }
+  	  	  case 6:{
+  	  		  HAL_GPIO_WritePin(a6_GPIO_Port, a6_Pin, GPIO_PIN_RESET);
+  	  		  break;
+  	  	  }
+  	  	  case 7:{
+  	  		  HAL_GPIO_WritePin(a7_GPIO_Port, a7_Pin, GPIO_PIN_RESET);
+  	  		  break;
+  	  	  }
+  	  	  case 8:{
+  	  		  HAL_GPIO_WritePin(a8_GPIO_Port, a8_Pin, GPIO_PIN_RESET);
+			  break;
+  	  	  }
+  	  	  case 9:{
+			  HAL_GPIO_WritePin(a9_GPIO_Port, a9_Pin, GPIO_PIN_RESET);
+			  break;
+  	  	  }
+  	  	  case 10:{
+  	  		  HAL_GPIO_WritePin(a10_GPIO_Port, a10_Pin, GPIO_PIN_RESET);
+			  break;
+  	  	  }
+  	  	  case 11:{
+  	  		  HAL_GPIO_WritePin(a11_GPIO_Port, a11_Pin, GPIO_PIN_RESET);
+			  break;
+  	  	  }
+  	  	  default:{
+  	  		  HAL_GPIO_WritePin(a0_GPIO_Port, a0_Pin, GPIO_PIN_RESET);
+  	  		  break;
+  	  	  }
+	  }
+  }
+int clock = 0;
+
+  while (1)
+  {
+	  setNumberOnClock(clock);
+	  ++clock;
+	  if(clock == 12) clock = 0;
+	  HAL_Delay(1000);
+}
