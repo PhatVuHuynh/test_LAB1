@@ -217,7 +217,6 @@ int main(void)
   clearAllClock();
 
   while (1){
-	  clearNumberOnClock(sec % 12);
 	  if(sec == 60){
 		  clearNumberOnClock(min % 12);
 		  ++min;
