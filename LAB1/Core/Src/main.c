@@ -92,7 +92,7 @@ int main(void)
   /* Infinite loop */
   /* USER CODE BEGIN WHILE */
 
-bool state = 1;
+int state = 1;
 while (1){
 	if(state){
 		HAL_GPIO_WritePin ( YELLOW_LED_GPIO_Port , YELLOW_LED_Pin , GPIO_PIN_RESET ) ;
@@ -103,7 +103,7 @@ while (1){
 		HAL_GPIO_WritePin ( YELLOW_LED_GPIO_Port , YELLOW_LED_Pin , GPIO_PIN_SET ) ;
 	}
 
-	state = !state;
+	state = state == 1 ? 0 : 1;
 	HAL_Delay (2000) ;
 
     /* USER CODE END WHILE */
