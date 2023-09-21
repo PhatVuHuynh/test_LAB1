@@ -64,8 +64,8 @@ all: main-build
 main-build: LED_ANIMATION.elf secondary-outputs
 
 # Tool invocations
-LED_ANIMATION.elf: $(OBJS) $(USER_OBJS) C:\Users\ADMIN\Downloads\VXL\STM32cube_IDE\LAB1\STM32F103C6UX_FLASH.ld makefile objects.list $(OPTIONAL_TOOL_DEPS)
-	arm-none-eabi-gcc -o "LED_ANIMATION.elf" @"objects.list" $(USER_OBJS) $(LIBS) -mcpu=cortex-m3 -T"C:\Users\ADMIN\Downloads\VXL\STM32cube_IDE\LAB1\STM32F103C6UX_FLASH.ld" --specs=nosys.specs -Wl,-Map="LED_ANIMATION.map" -Wl,--gc-sections -static --specs=nano.specs -mfloat-abi=soft -mthumb -Wl,--start-group -lc -lm -Wl,--end-group
+LED_ANIMATION.elf: $(OBJS) $(USER_OBJS) C:\Users\ADMIN\Downloads\VXL\git\LAB1\test_LAB1\LAB1\STM32F103C6UX_FLASH.ld makefile objects.list $(OPTIONAL_TOOL_DEPS)
+	arm-none-eabi-gcc -o "LED_ANIMATION.elf" @"objects.list" $(USER_OBJS) $(LIBS) -mcpu=cortex-m3 -T"C:\Users\ADMIN\Downloads\VXL\git\LAB1\test_LAB1\LAB1\STM32F103C6UX_FLASH.ld" --specs=nosys.specs -Wl,-Map="LED_ANIMATION.map" -Wl,--gc-sections -static --specs=nano.specs -mfloat-abi=soft -mthumb -Wl,--start-group -lc -lm -Wl,--end-group
 	@echo 'Finished building target: $@'
 	@echo ' '
 
